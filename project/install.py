@@ -50,7 +50,7 @@ def install_update_module(module, update, config_admin=False):
     return new_module
 
 
-def clvhealth_mostlyopen_install():
+def mostlyopen_install():
 
     update = base.update
 
@@ -117,7 +117,7 @@ def secondsToStr(t):
         reduce(lambda ll, b: divmod(ll[0], b) + ll[1:], [(t*1000,), 1000, 60, 60])
 
 
-if __name__ == 'mostlyopenain__':
+if __name__ == '__main__':
 
     from time import time
 
@@ -125,10 +125,10 @@ if __name__ == 'mostlyopenain__':
 
     start = time()
 
-    print '--> Executing clvhealth_pbm_install.py...'
+    print '--> Executing mostlyopen_install.py...'
 
-    print '--> Executing clvhealth_pbm_install()...'
-    clvhealth_pbm_install()
+    print '--> Executing mostlyopen_install()...'
+    mostlyopen_install()
 
-    print '--> clvhealth_pbm_install.py'
+    print '--> mostlyopen_install.py'
     print '--> Execution time:', secondsToStr(time() - start)
