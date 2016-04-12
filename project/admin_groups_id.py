@@ -584,6 +584,38 @@ def Administrator_groups_id_clv_medicament_group():
     print 'Done.'
 
 
+def Administrator_groups_id_l10n_br_clv_cmed_medicament():
+
+    print 'Executing Administrator_groups_id_l10n_br_clv_cmed_medicament...'
+
+    sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
+    uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
+    sock = xmlrpclib.ServerProxy(base.sock_str)
+
+    args = [('name', '=', 'Administrator'), ]
+    user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
+
+    # l10n_br_clv_cmed_medicament
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'CMED Medicament User')]
+                            )[0]
+            )],
+        }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'CMED Medicament Manager')]
+                            )[0]
+            )],
+        }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+
+    print 'Done.'
+
+
 def Administrator_groups_id_l10n_br_clv_abcfarma_medicament():
 
     print 'Executing Administrator_groups_id_l10n_br_clv_abcfarma_medicament...'
