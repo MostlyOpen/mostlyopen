@@ -102,6 +102,8 @@ def mostlyopen_install():
 
     install_update_module('clv_person', update, True)
 
+    install_update_module('clv_patient', update, True)
+
     install_update_module('clv_medicament', update, True)
 
     install_update_module('clv_medicament_list', update, True)
