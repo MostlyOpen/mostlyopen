@@ -648,6 +648,38 @@ def Data_Administrator_groups_id_l10n_br_clv_abcfarma_medicament():
     print 'Done.'
 
 
+def Data_Administrator_groups_id_l10n_br_clv_orz_medicament():
+
+    print 'Executing Administrator_groups_id_l10n_br_clv_orz_medicament...'
+
+    sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
+    uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
+    sock = xmlrpclib.ServerProxy(base.sock_str)
+
+    args = [('name', '=', 'Data Administrator'), ]
+    user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
+
+    # l10n_br_clv_orz_medicament
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'ORZ Medicament User')]
+                            )[0]
+            )],
+        }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'ORZ Medicament Manager')]
+                            )[0]
+            )],
+        }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+
+    print 'Done.'
+
+
 def Data_Administrator_groups_id_clv_insured():
 
     print 'Executing Data_Administrator_groups_id_clv_insured...'
