@@ -116,6 +116,8 @@ def mostlyopen_install():
 
     install_update_module('l10n_br_clv_orz_medicament', update, True)
 
+    install_update_module('l10n_br_clv_grm_medicament', update, True)
+
     install_update_module('clv_insured', update, True)
 
 
