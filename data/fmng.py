@@ -93,12 +93,12 @@ if __name__ == '__main__':
 
     client = erppeek.Client(server, dbname, username, password)
 
-    file_args = []
-    db_path = 'data/fmng.sqlite'
-    print('-->', client, file_args, db_path)
-    print('--> Executing fmng_entity_export_sqlite()...')
-    print()
-    fmng_entity_export_sqlite(client, file_args, db_path)
+    # file_args = []
+    # db_path = 'data/fmng.sqlite'
+    # print('-->', client, file_args, db_path)
+    # print('--> Executing fmng_entity_export_sqlite()...')
+    # print()
+    # fmng_entity_export_sqlite(client, file_args, db_path)
 
     # file_args = []
     # db_path = 'data/fmng.sqlite'
