@@ -197,7 +197,7 @@ def YourCompany():
         'website': '',
         'tz': tz,
         'lang': lang
-        }
+    }
     sock.execute(dbname, uid, admin_user_pw, 'res.partner', 'write', partner_id, values)
 
     args = [('name', '=', 'Your Company'), ]
@@ -208,7 +208,7 @@ def YourCompany():
         'website': '',
         'rml_header1': '',
         'logo': YourCompany_logo
-        }
+    }
     sock.execute(dbname, uid, admin_user_pw, 'res.company', 'write', company_id, values)
 
     print 'Done.'
@@ -229,7 +229,7 @@ def Administrator():
         'tz': tz,
         'email': admin_user_email,
         'image': Administrator_image,
-        }
+    }
     sock.execute(dbname, uid, admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -275,8 +275,8 @@ def Administrator_groups_id_updt():
             sock.execute(
                 dbname, uid, admin_user_pw,
                 'res.groups', 'search', [('name', '=', 'Contact Creation')])[0],
-            ])],
-        }
+        ])],
+    }
     sock.execute(dbname, uid, admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -306,7 +306,7 @@ def Demo_User():
         'company_id': company_id[0],
         'tz': tz,
         'lang': lang
-        }
+    }
     partner_id = sock.execute(dbname, uid, admin_user_pw, 'res.partner', 'create', values)
 
     values = {
@@ -317,7 +317,7 @@ def Demo_User():
         'password': demo_user_pw,
         'image': Demo_User_image,
         'groups_id': [(6, 0, [])],
-        }
+    }
     user_id = sock.execute(dbname, uid, admin_user_pw, 'res.users', 'create', values)
 
     values = {
@@ -326,8 +326,8 @@ def Demo_User():
             sock.execute(
                 dbname, uid, admin_user_pw,
                 'res.groups', 'search', [('name', '=', 'Employee')])[0],
-            ])],
-        }
+        ])],
+    }
     sock.execute(dbname, uid, admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -357,7 +357,7 @@ def Data_Administrator_User():
         'company_id': company_id[0],
         'tz': tz,
         'lang': lang
-        }
+    }
     partner_id = sock.execute(dbname, uid, admin_user_pw, 'res.partner', 'create', values)
 
     values = {
@@ -368,7 +368,7 @@ def Data_Administrator_User():
         'password': data_admin_user_pw,
         'image': DataAdministrator_image,
         'groups_id': [(6, 0, [])],
-        }
+    }
     user_id = sock.execute(dbname, uid, admin_user_pw, 'res.users', 'create', values)
 
     values = {
@@ -380,8 +380,8 @@ def Data_Administrator_User():
             sock.execute(
                 dbname, uid, admin_user_pw,
                 'res.groups', 'search', [('name', '=', 'Contact Creation')])[0],
-            ])],
-        }
+        ])],
+    }
     sock.execute(dbname, uid, admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
