@@ -161,8 +161,8 @@ def Administrator_groups_id_clv_annotation():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Annotation Category Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -489,16 +489,16 @@ def Administrator_groups_id_clv_person_mng():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Person Management User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Person Management Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -609,24 +609,24 @@ def Administrator_groups_id_clv_medicament_list():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Medicament List Category Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Medicament List Version Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Medicament List Item Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
