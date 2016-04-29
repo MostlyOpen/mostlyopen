@@ -86,7 +86,11 @@ def mostlyopen_install():
 
     install_update_module('clv_tag', update, True)
 
+    install_update_module('clv_tag_cst', update)
+
     install_update_module('clv_annotation', update, True)
+
+    install_update_module('clv_annotation_cst', update)
 
     install_update_module('clv_document', update, True)
 
@@ -97,6 +101,8 @@ def mostlyopen_install():
     install_update_module('clv_residence', update, True)
 
     install_update_module('clv_file', update, True)
+
+    install_update_module('clv_file_cst', update)
 
     install_update_module('clv_place', update, True)
 
