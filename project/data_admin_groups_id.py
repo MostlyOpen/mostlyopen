@@ -57,40 +57,40 @@ def Data_Administrator_groups_id_clv_base():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'User (clv)')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Super User (clv)')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Manager (clv)')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Register Manager (clv)')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Super Manager (clv)')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -113,16 +113,16 @@ def Data_Administrator_groups_id_clv_tag():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Tag User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Tag Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -145,16 +145,16 @@ def Data_Administrator_groups_id_clv_annotation():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Annotation User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Annotation Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -177,24 +177,24 @@ def Data_Administrator_groups_id_clv_document():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Document User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Document Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Document Approver')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -217,24 +217,24 @@ def Data_Administrator_groups_id_clv_professional():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Professional User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Professional Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Professional Category Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -257,24 +257,24 @@ def Data_Administrator_groups_id_clv_address():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Address User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Address Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Address Category Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -297,16 +297,16 @@ def Data_Administrator_groups_id_clv_residence():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Residence User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Residence Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -329,24 +329,24 @@ def Data_Administrator_groups_id_clv_file():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'File User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'File Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'File Category Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -369,24 +369,24 @@ def Data_Administrator_groups_id_clv_place():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Place User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Place Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Place Category Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -409,24 +409,24 @@ def Data_Administrator_groups_id_clv_person():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Person User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Person Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Person Category Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -449,16 +449,16 @@ def Data_Administrator_groups_id_clv_patient():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Patient User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Patient Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -481,24 +481,24 @@ def Data_Administrator_groups_id_clv_medicament():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Professional User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Professional Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Professional Category Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -521,16 +521,16 @@ def Data_Administrator_groups_id_clv_medicament_list():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Medicament List User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Medicament List Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     # values = {
     #     'groups_id': [(
@@ -561,16 +561,16 @@ def Data_Administrator_groups_id_clv_medicament_group():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Medicament Group User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Medicament Group Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     # values = {
     #     'groups_id': [(
@@ -601,16 +601,16 @@ def Data_Administrator_groups_id_l10n_br_clv_cmed_medicament():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'CMED Medicament User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'CMED Medicament Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -633,16 +633,16 @@ def Data_Administrator_groups_id_l10n_br_clv_abcfarma_medicament():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'ABCFarma Medicament User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'ABCFarma Medicament Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -665,16 +665,16 @@ def Data_Administrator_groups_id_l10n_br_clv_orz_medicament():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'ORZ Medicament User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'ORZ Medicament Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -697,16 +697,16 @@ def Data_Administrator_groups_id_l10n_br_clv_grm_medicament():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'ORZ Medicament User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'ORZ Medicament Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -729,24 +729,24 @@ def Data_Administrator_groups_id_clv_insured():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Insured User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Insured Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Insured Category Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -769,16 +769,16 @@ def Data_Administrator_groups_id_clv_insured_mng():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Insured Management User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Insured Management Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
@@ -801,16 +801,16 @@ def Data_Administrator_groups_id_clv_insured_ext():
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Insured (Ext) User')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
     values = {
         'groups_id': [(
             4, sock.execute(base.dbname, uid, base.admin_user_pw,
                             'res.groups', 'search', [('name', '=', 'Insured (Ext) Manager')]
                             )[0]
-            )],
-        }
+        )],
+    }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
