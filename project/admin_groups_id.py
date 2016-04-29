@@ -400,6 +400,46 @@ def Administrator_groups_id_clv_place():
     print 'Done.'
 
 
+def Administrator_groups_id_clv_batch():
+
+    print 'Executing Administrator_groups_id_clv_batch...'
+
+    sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
+    uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
+    sock = xmlrpclib.ServerProxy(base.sock_str)
+
+    args = [('name', '=', 'Administrator'), ]
+    user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
+
+    # clv_batch
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Batch User')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Batch Manager')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    # values = {
+    #     'groups_id': [(
+    #         4, sock.execute(base.dbname, uid, base.admin_user_pw,
+    #                         'res.groups', 'search', [('name', '=', 'Batch Category Manager')]
+    #                         )[0]
+    #     )],
+    # }
+    # sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+
+    print 'Done.'
+
+
 def Administrator_groups_id_clv_person():
 
     print 'Executing Administrator_groups_id_clv_person...'
