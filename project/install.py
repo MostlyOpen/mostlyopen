@@ -86,7 +86,11 @@ def mostlyopen_install():
 
     install_update_module('clv_tag', update, True)
 
+    install_update_module('clv_tag_cst', update)
+
     install_update_module('clv_annotation', update, True)
+
+    install_update_module('clv_annotation_cst', update)
 
     install_update_module('clv_document', update, True)
 
@@ -98,13 +102,19 @@ def mostlyopen_install():
 
     install_update_module('clv_file', update, True)
 
+    install_update_module('clv_file_cst', update)
+
     install_update_module('clv_place', update, True)
+
+    install_update_module('clv_batch', update, True)
 
     install_update_module('clv_person', update, True)
 
     install_update_module('l10n_br_clv_person', update)
 
     install_update_module('clv_patient', update, True)
+
+    install_update_module('clv_person_mng', update, True)
 
     install_update_module('clv_medicament', update, True)
 
@@ -124,13 +134,13 @@ def mostlyopen_install():
 
     install_update_module('clv_insured_mng', update, True)
 
-    # install_update_module('clv_insured_ext', update, True)
+    install_update_module('clv_insured_ext', update, True)
 
 
 def secondsToStr(t):
 
     return "%d:%02d:%02d.%03d" % \
-        reduce(lambda ll, b: divmod(ll[0], b) + ll[1:], [(t*1000,), 1000, 60, 60])
+        reduce(lambda ll, b: divmod(ll[0], b) + ll[1:], [(t * 1000,), 1000, 60, 60])
 
 
 if __name__ == '__main__':
