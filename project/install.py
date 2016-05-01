@@ -132,6 +132,8 @@ def mostlyopen_install():
 
     install_update_module('clv_insured', update, True)
 
+    install_update_module('clv_insured_card', update, True)
+
     install_update_module('clv_insured_mng', update, True)
 
     install_update_module('clv_insured_ext', update, True)
