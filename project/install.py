@@ -76,8 +76,6 @@ def mostlyopen_install():
         proxy = client.model('ir.module.module')
         proxy.update_list()
 
-    install_update_module('clv_todo', update)
-
     install_update_module('clv_web', update)
 
     install_update_module('clv_employee', update)
@@ -139,6 +137,10 @@ def mostlyopen_install():
     install_update_module('clv_insured_mng', update, True)
 
     install_update_module('clv_insured_ext', update, True)
+
+    install_update_module('clv_pharmacy', update, True)
+
+    install_update_module('clv_todo', update)
 
 
 def secondsToStr(t):
