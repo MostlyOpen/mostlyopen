@@ -138,6 +138,8 @@ def mostlyopen_install():
 
     install_update_module('clv_insured_ext', update, True)
 
+    install_update_module('clv_insurance_client', update, True)
+
     install_update_module('clv_pharmacy', update, True)
 
     install_update_module('clv_todo', update)
