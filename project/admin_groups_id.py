@@ -544,6 +544,270 @@ def Administrator_groups_id_clv_person_mng():
     print 'Done.'
 
 
+def Administrator_groups_id_clv_insured():
+
+    print 'Executing Administrator_groups_id_clv_insured...'
+
+    sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
+    uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
+    sock = xmlrpclib.ServerProxy(base.sock_str)
+
+    args = [('name', '=', 'Administrator'), ]
+    user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
+
+    # clv_insured
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Insured User')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Insured Manager')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Insured Category Manager')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+
+    print 'Done.'
+
+
+def Administrator_groups_id_clv_insured_card():
+
+    print 'Executing Administrator_groups_id_clv_insured_card...'
+
+    sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
+    uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
+    sock = xmlrpclib.ServerProxy(base.sock_str)
+
+    args = [('name', '=', 'Administrator'), ]
+    user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
+
+    # clv_insured_card
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Insured Card User')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Insured Card Manager')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    # values = {
+    #     'groups_id': [(
+    #         4, sock.execute(base.dbname, uid, base.admin_user_pw,
+    #                         'res.groups', 'search', [('name', '=', 'Insured Card Category Manager')]
+    #                         )[0]
+    #     )],
+    # }
+    # sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+
+    print 'Done.'
+
+
+def Administrator_groups_id_clv_insured_mng():
+
+    print 'Executing Administrator_groups_id_clv_insured_mng...'
+
+    sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
+    uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
+    sock = xmlrpclib.ServerProxy(base.sock_str)
+
+    args = [('name', '=', 'Administrator'), ]
+    user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
+
+    # clv_insured_mng
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Insured Management User')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Insured Management Manager')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+
+    print 'Done.'
+
+
+def Administrator_groups_id_clv_insured_ext():
+
+    print 'Executing Administrator_groups_id_clv_insured_ext...'
+
+    sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
+    uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
+    sock = xmlrpclib.ServerProxy(base.sock_str)
+
+    args = [('name', '=', 'Administrator'), ]
+    user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
+
+    # clv_insured_ext
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Insured (Ext) User')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Insured (Ext) Manager')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+
+    print 'Done.'
+
+
+def Administrator_groups_id_clv_insurance_client():
+
+    print 'Executing Administrator_groups_id_clv_insurance_client...'
+
+    sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
+    uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
+    sock = xmlrpclib.ServerProxy(base.sock_str)
+
+    args = [('name', '=', 'Administrator'), ]
+    user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
+
+    # clv_insurance_client
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Insurance Client User')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Insurance Client Manager')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    # values = {
+    #     'groups_id': [(
+    #         4, sock.execute(base.dbname, uid, base.admin_user_pw,
+    #                         'res.groups', 'search', [('name', '=', 'Insurance Client Category Manager')]
+    #                         )[0]
+    #     )],
+    # }
+    # sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+
+    print 'Done.'
+
+
+def Administrator_groups_id_clv_insurance_plan():
+
+    print 'Executing Administrator_groups_id_clv_insurance_plan...'
+
+    sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
+    uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
+    sock = xmlrpclib.ServerProxy(base.sock_str)
+
+    args = [('name', '=', 'Administrator'), ]
+    user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
+
+    # clv_insurance_plan
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Insurance Plan User')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Insurance Plan Manager')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    # values = {
+    #     'groups_id': [(
+    #         4, sock.execute(base.dbname, uid, base.admin_user_pw,
+    #                         'res.groups', 'search', [('name', '=', 'Insurance Plan Category Manager')]
+    #                         )[0]
+    #     )],
+    # }
+    # sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+
+    print 'Done.'
+
+
+def Administrator_groups_id_clv_pharmacy():
+
+    print 'Executing Administrator_groups_id_clv_pharmacy...'
+
+    sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
+    uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
+    sock = xmlrpclib.ServerProxy(base.sock_str)
+
+    args = [('name', '=', 'Administrator'), ]
+    user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
+
+    # clv_pharmacy
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Pharmacy User')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Pharmacy Manager')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    # values = {
+    #     'groups_id': [(
+    #         4, sock.execute(base.dbname, uid, base.admin_user_pw,
+    #                         'res.groups', 'search', [('name', '=', 'Pharmacy Category Manager')]
+    #                         )[0]
+    #     )],
+    # }
+    # sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+
+    print 'Done.'
+
+
 def Administrator_groups_id_clv_medicament():
 
     print 'Executing Administrator_groups_id_clv_medicament...'
@@ -836,229 +1100,5 @@ def Administrator_groups_id_l10n_br_clv_grm_medicament():
         )],
     }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
-
-    print 'Done.'
-
-
-def Administrator_groups_id_clv_insured():
-
-    print 'Executing Administrator_groups_id_clv_insured...'
-
-    sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
-    uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
-    sock = xmlrpclib.ServerProxy(base.sock_str)
-
-    args = [('name', '=', 'Administrator'), ]
-    user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
-
-    # clv_insured
-    values = {
-        'groups_id': [(
-            4, sock.execute(base.dbname, uid, base.admin_user_pw,
-                            'res.groups', 'search', [('name', '=', 'Insured User')]
-                            )[0]
-        )],
-    }
-    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
-    values = {
-        'groups_id': [(
-            4, sock.execute(base.dbname, uid, base.admin_user_pw,
-                            'res.groups', 'search', [('name', '=', 'Insured Manager')]
-                            )[0]
-        )],
-    }
-    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
-    values = {
-        'groups_id': [(
-            4, sock.execute(base.dbname, uid, base.admin_user_pw,
-                            'res.groups', 'search', [('name', '=', 'Insured Category Manager')]
-                            )[0]
-        )],
-    }
-    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
-
-    print 'Done.'
-
-
-def Administrator_groups_id_clv_insured_card():
-
-    print 'Executing Administrator_groups_id_clv_insured_card...'
-
-    sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
-    uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
-    sock = xmlrpclib.ServerProxy(base.sock_str)
-
-    args = [('name', '=', 'Administrator'), ]
-    user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
-
-    # clv_insured_card
-    values = {
-        'groups_id': [(
-            4, sock.execute(base.dbname, uid, base.admin_user_pw,
-                            'res.groups', 'search', [('name', '=', 'Insured Card User')]
-                            )[0]
-        )],
-    }
-    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
-    values = {
-        'groups_id': [(
-            4, sock.execute(base.dbname, uid, base.admin_user_pw,
-                            'res.groups', 'search', [('name', '=', 'Insured Card Manager')]
-                            )[0]
-        )],
-    }
-    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
-    # values = {
-    #     'groups_id': [(
-    #         4, sock.execute(base.dbname, uid, base.admin_user_pw,
-    #                         'res.groups', 'search', [('name', '=', 'Insured Card Category Manager')]
-    #                         )[0]
-    #     )],
-    # }
-    # sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
-
-    print 'Done.'
-
-
-def Administrator_groups_id_clv_insured_mng():
-
-    print 'Executing Administrator_groups_id_clv_insured_mng...'
-
-    sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
-    uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
-    sock = xmlrpclib.ServerProxy(base.sock_str)
-
-    args = [('name', '=', 'Administrator'), ]
-    user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
-
-    # clv_insured_mng
-    values = {
-        'groups_id': [(
-            4, sock.execute(base.dbname, uid, base.admin_user_pw,
-                            'res.groups', 'search', [('name', '=', 'Insured Management User')]
-                            )[0]
-        )],
-    }
-    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
-    values = {
-        'groups_id': [(
-            4, sock.execute(base.dbname, uid, base.admin_user_pw,
-                            'res.groups', 'search', [('name', '=', 'Insured Management Manager')]
-                            )[0]
-        )],
-    }
-    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
-
-    print 'Done.'
-
-
-def Administrator_groups_id_clv_insured_ext():
-
-    print 'Executing Administrator_groups_id_clv_insured_ext...'
-
-    sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
-    uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
-    sock = xmlrpclib.ServerProxy(base.sock_str)
-
-    args = [('name', '=', 'Administrator'), ]
-    user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
-
-    # clv_insured_ext
-    values = {
-        'groups_id': [(
-            4, sock.execute(base.dbname, uid, base.admin_user_pw,
-                            'res.groups', 'search', [('name', '=', 'Insured (Ext) User')]
-                            )[0]
-        )],
-    }
-    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
-    values = {
-        'groups_id': [(
-            4, sock.execute(base.dbname, uid, base.admin_user_pw,
-                            'res.groups', 'search', [('name', '=', 'Insured (Ext) Manager')]
-                            )[0]
-        )],
-    }
-    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
-
-    print 'Done.'
-
-
-def Administrator_groups_id_clv_insurance_client():
-
-    print 'Executing Administrator_groups_id_clv_insurance_client...'
-
-    sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
-    uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
-    sock = xmlrpclib.ServerProxy(base.sock_str)
-
-    args = [('name', '=', 'Administrator'), ]
-    user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
-
-    # clv_insurance_client
-    values = {
-        'groups_id': [(
-            4, sock.execute(base.dbname, uid, base.admin_user_pw,
-                            'res.groups', 'search', [('name', '=', 'Insurance Client User')]
-                            )[0]
-        )],
-    }
-    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
-    values = {
-        'groups_id': [(
-            4, sock.execute(base.dbname, uid, base.admin_user_pw,
-                            'res.groups', 'search', [('name', '=', 'Insurance Client Manager')]
-                            )[0]
-        )],
-    }
-    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
-    # values = {
-    #     'groups_id': [(
-    #         4, sock.execute(base.dbname, uid, base.admin_user_pw,
-    #                         'res.groups', 'search', [('name', '=', 'Insurance Client Category Manager')]
-    #                         )[0]
-    #     )],
-    # }
-    # sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
-
-    print 'Done.'
-
-
-def Administrator_groups_id_clv_pharmacy():
-
-    print 'Executing Administrator_groups_id_clv_pharmacy...'
-
-    sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
-    uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
-    sock = xmlrpclib.ServerProxy(base.sock_str)
-
-    args = [('name', '=', 'Administrator'), ]
-    user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
-
-    # clv_pharmacy
-    values = {
-        'groups_id': [(
-            4, sock.execute(base.dbname, uid, base.admin_user_pw,
-                            'res.groups', 'search', [('name', '=', 'Pharmacy User')]
-                            )[0]
-        )],
-    }
-    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
-    values = {
-        'groups_id': [(
-            4, sock.execute(base.dbname, uid, base.admin_user_pw,
-                            'res.groups', 'search', [('name', '=', 'Pharmacy Manager')]
-                            )[0]
-        )],
-    }
-    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
-    # values = {
-    #     'groups_id': [(
-    #         4, sock.execute(base.dbname, uid, base.admin_user_pw,
-    #                         'res.groups', 'search', [('name', '=', 'Pharmacy Category Manager')]
-    #                         )[0]
-    #     )],
-    # }
-    # sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'

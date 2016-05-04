@@ -116,6 +116,20 @@ def mostlyopen_install():
 
     install_update_module('clv_person_mng', update, True)
 
+    install_update_module('clv_insurance_client', update, True)
+
+    install_update_module('clv_insurance_plan', update, True)
+
+    install_update_module('clv_insured', update, True)
+
+    install_update_module('clv_insured_card', update, True)
+
+    install_update_module('clv_insured_mng', update, True)
+
+    install_update_module('clv_insured_ext', update, True)
+
+    install_update_module('clv_pharmacy', update, True)
+
     install_update_module('clv_medicament', update, True)
 
     install_update_module('clv_medicament_list', update, True)
@@ -129,18 +143,6 @@ def mostlyopen_install():
     install_update_module('l10n_br_clv_orz_medicament', update, True)
 
     install_update_module('l10n_br_clv_grm_medicament', update, True)
-
-    install_update_module('clv_insured', update, True)
-
-    install_update_module('clv_insured_card', update, True)
-
-    install_update_module('clv_insured_mng', update, True)
-
-    install_update_module('clv_insured_ext', update, True)
-
-    install_update_module('clv_insurance_client', update, True)
-
-    install_update_module('clv_pharmacy', update, True)
 
     install_update_module('clv_todo', update)
 
