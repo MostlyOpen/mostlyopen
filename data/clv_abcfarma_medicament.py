@@ -111,8 +111,8 @@ if __name__ == '__main__':
     # updt_item_data = True
     # print('-->', client, file_name, list_name,
     #       updt_medicament_data, updt_item_data)
-    # print('--> Executing clv_abcfarma_import_new()...')
-    # clv_abcfarma_import_new(client, file_name, list_name,
+    # print('--> Executing clv_abcfarma_medicament_import()...')
+    # clv_abcfarma_medicament_import(client, file_name, list_name,
     #                         updt_medicament_data, updt_item_data)
 
     # file_name = '/opt/openerp/abcfarma/TABELA_2016_05.dbf'
@@ -121,8 +121,8 @@ if __name__ == '__main__':
     # updt_item_data = True
     # print('-->', client, file_name, list_name,
     #       updt_medicament_data, updt_item_data)
-    # print('--> Executing clv_abcfarma_import_new()...')
-    # clv_abcfarma_import_new(client, file_name, list_name,
+    # print('--> Executing clv_abcfarma_medicament_import()...')
+    # clv_abcfarma_medicament_import(client, file_name, list_name,
     #                         updt_medicament_data, updt_item_data)
 
     # file_name = '/opt/openerp/abcfarma/TABELA_2016_03.dbf'
@@ -131,8 +131,8 @@ if __name__ == '__main__':
     # updt_item_data = False
     # print('-->', client, file_name, list_name,
     #       updt_medicament_data, updt_item_data)
-    # print('--> Executing clv_abcfarma_import_new()...')
-    # clv_abcfarma_import_new(client, file_name, list_name,
+    # print('--> Executing clv_abcfarma_medicament_import()...')
+    # clv_abcfarma_medicament_import(client, file_name, list_name,
     #                         updt_medicament_data, updt_item_data)
 
     print()
