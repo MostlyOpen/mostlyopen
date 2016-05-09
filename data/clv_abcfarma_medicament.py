@@ -24,7 +24,7 @@ from __future__ import print_function
 import argparse
 import getpass
 
-from erppeek import *
+from odoo_api import *
 
 
 def get_arguments():
@@ -134,6 +134,15 @@ if __name__ == '__main__':
     # print('--> Executing clv_abcfarma_medicament_import()...')
     # clv_abcfarma_medicament_import(client, file_name, list_name,
     #                         updt_medicament_data, updt_item_data)
+
+    # ########## 2016-05-08 ##########
+
+    abcfarma_medicament_args = []
+    db_path = 'data/mostlyopen.sqlite'
+    print('-->', client, abcfarma_medicament_args, db_path)
+    print('--> Executing clv_abcfarma_medicament_export_sqlite()...')
+    print()
+    clv_abcfarma_medicament_export_sqlite(client, abcfarma_medicament_args, db_path)
 
     print()
     print('--> clv_abcfarma_medicament.py', '- Execution time:', secondsToStr(time() - start))
