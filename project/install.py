@@ -112,6 +112,8 @@ def mostlyopen_install():
 
     install_update_module('l10n_br_clv_person', update)
 
+    install_update_module('clv_family', update, True)
+
     install_update_module('clv_community', update, True)
 
     install_update_module('clv_patient', update, True)

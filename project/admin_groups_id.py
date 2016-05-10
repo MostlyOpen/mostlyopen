@@ -480,6 +480,62 @@ def Administrator_groups_id_clv_person():
     print 'Done.'
 
 
+def Administrator_groups_id_clv_family():
+
+    print 'Executing Administrator_groups_id_clv_family...'
+
+    sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
+    uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
+    sock = xmlrpclib.ServerProxy(base.sock_str)
+
+    args = [('name', '=', 'Administrator'), ]
+    user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
+
+    # clv_family
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Family User')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Family Manager')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Family Category Manager')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Family Member Role Manager')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    values = {
+        'groups_id': [(
+            4, sock.execute(base.dbname, uid, base.admin_user_pw,
+                            'res.groups', 'search', [('name', '=', 'Family Member Manager')]
+                            )[0]
+        )],
+    }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+
+    print 'Done.'
+
+
 def Administrator_groups_id_clv_community():
 
     print 'Executing Administrator_groups_id_clv_community...'
